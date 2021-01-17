@@ -1,0 +1,45 @@
+<!--Gitの設定-->
+
+<!--名前とメールアドレスを設定-->
+git config --global user.name "名前"
+git config --global user.email "メールアドレス"
+
+<!--設定値一覧を表示-->
+git config -l
+
+<!--ディレクトリでgitを使い始めるためのコマンド-->
+git init
+
+<!--トラッキング状態にする-->
+git add トラッキング状態にしたいファイル名
+
+<!--全てのファイルをトラッキング状態にする-->
+git add .
+
+<!--コミットさせる-->
+git commit -m "コミットメッセージ"
+
+コミットメッセージは後からどういう理由でコミットをしたか？
+を分かりやすくするために入力する
+
+<!--コミットしたファイルや履歴を確認-->
+git log
+
+<!--リモートリポジトリにpush-->
+git remote add origin git@github.com:アカウント名/リポジトリ名.git
+git push -u origin master
+
+*git remoteについてはそのローカルリポジトリを初めて利用するときに必要
+ この操作は一度利用した場合、次の操作で必要ありません
+
+<!--1度目の流れ-->
+git init
+git add トラッキング状態にしたいファイル名
+git commit -m "コミットメッセージ"
+git remote add origin git@github.com:アカウント名/リポジトリ名.git
+git push -u origin master
+
+<!--2度目以降の流れ-->
+git add トラッキング状態にしたいファイル名
+git commit -m "コミットメッセージ"
+git push -u origin master
