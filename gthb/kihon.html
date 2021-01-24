@@ -43,3 +43,18 @@ git push -u origin master
 git add トラッキング状態にしたいファイル名
 git commit -m "コミットメッセージ"
 git push -u origin master
+
+<!--Githubにpushする時errorが出た場合-->
+ 
+ <CASE1> この表示が出た時
+ 
+  ! [rejected]        master -> master (fetch first)
+ error: failed to push some refs to 'git@github.com:~~~~~/rb.git'
+ hint: Updates were rejected because the remote contains work that you do
+ hint: not have locally. This is usually caused by another repository pushing
+ hint: to the same ref. You may want to first integrate the remote changes
+ hint: (e.g., 'git pull ...') before pushing again.
+ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ <下記のコマンドを入力するとpushできる>
+ git push -f origin master
